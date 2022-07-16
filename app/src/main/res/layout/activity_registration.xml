@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.authentification.RegistrationActivity">
+
+    <ImageView
+        android:id="@+id/img_view2"
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:contentDescription="@string/image_login"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:srcCompat="@drawable/registrasi" />
+
+    <TextView
+        android:id="@+id/tv_signup"
+        android:alpha="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/tv_signup"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/img_view2"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <com.dicoding.picodiploma.mystoryapp.view.authentification.CustomEditText
+        android:id="@+id/in_name"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:alpha="0"
+        android:drawableStart="@drawable/ic_baseline_person"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/hint_name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/img_view2"
+        app:layout_constraintStart_toStartOf="@+id/tv_signup"
+        app:layout_constraintTop_toBottomOf="@+id/tv_signup" />
+
+    <com.dicoding.picodiploma.mystoryapp.view.authentification.CustomEditText
+        android:id="@+id/in_email"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:alpha="0"
+        android:drawableStart="@drawable/ic_baseline_email"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/hint_email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/in_name"
+        app:layout_constraintStart_toStartOf="@+id/in_name"
+        app:layout_constraintTop_toBottomOf="@+id/in_name" />
+
+    <com.dicoding.picodiploma.mystoryapp.view.authentification.CustomEditText
+        android:id="@+id/in_password"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:alpha="0"
+        android:drawableStart="@drawable/ic_baseline_password"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/in_email"
+        app:layout_constraintStart_toStartOf="@+id/in_email"
+        app:layout_constraintTop_toBottomOf="@+id/in_email" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:alpha="0"
+        android:text="@string/link_register"
+        app:layout_constraintEnd_toEndOf="@+id/in_password"
+        app:layout_constraintStart_toStartOf="@+id/in_password"
+        app:layout_constraintTop_toBottomOf="@+id/in_password" />
+
+    <Button
+        android:id="@+id/btn_login_back"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:alpha="0"
+        android:background="@drawable/button_border"
+        android:text="@string/login"
+        android:textColor="@color/orange_3"
+        app:layout_constraintEnd_toEndOf="@+id/btn_register"
+        app:layout_constraintStart_toStartOf="@+id/btn_register"
+        app:layout_constraintTop_toBottomOf="@+id/tv_question2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="7dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="195dp" />
+
+    <TextView
+        android:id="@+id/tv_question2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:alpha="0"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/question2"
+        app:layout_constraintEnd_toEndOf="@+id/btn_register"
+        app:layout_constraintStart_toStartOf="@+id/btn_register"
+        app:layout_constraintTop_toBottomOf="@+id/btn_register" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
